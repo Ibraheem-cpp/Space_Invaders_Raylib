@@ -1,5 +1,6 @@
 #include <iostream>
 #include "raylib.h"
+#include "game.hpp"
 
 int main()
 {
@@ -8,19 +9,24 @@ int main()
 
     InitWindow(width, height, "Space Invaders");
     SetTargetFPS(60);
-
-    Texture2D spaceship = LoadTexture("Graphics/spaceship.png");
+    Game game;
+    
 
     while (!WindowShouldClose()) {
-        
+
+        game.checkInput();
+
+
         BeginDrawing();
         ClearBackground(BLACK);
-        DrawTexture(spaceship, width / 2 - 50, height / 2 + 250, WHITE);
+        game.Draw();
 
         EndDrawing();
     }
 
-    UnloadTexture(spaceship);
+    
     CloseWindow();
 
+
+    return 0;
 }
