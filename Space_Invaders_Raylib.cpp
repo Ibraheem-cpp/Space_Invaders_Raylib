@@ -9,15 +9,18 @@ int main()
     InitWindow(width, height, "Space Invaders");
     SetTargetFPS(60);
 
+    Texture2D spaceship = LoadTexture("Graphics/spaceship.png");
+
     while (!WindowShouldClose()) {
         
         BeginDrawing();
         ClearBackground(BLACK);
-        DrawCircle(width / 2, height / 2, 20.0, RED);
+        DrawTexture(spaceship, width / 2 - 50, height / 2 + 250, WHITE);
 
         EndDrawing();
     }
 
+    UnloadTexture(spaceship);
     CloseWindow();
 
 }
