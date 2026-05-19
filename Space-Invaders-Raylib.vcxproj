@@ -124,11 +124,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="laser.cpp" />
     <ClCompile Include="spaceship.cpp" />
     <ClCompile Include="Space_Invaders_Raylib.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.hpp" />
+    <ClInclude Include="laser.hpp" />
     <ClInclude Include="spaceship.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
