@@ -15,5 +15,7 @@ public:
 	void Draw() const;
 	void move();
 
+	bool Active() const;
+
 	~Laser();
 };

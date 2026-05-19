@@ -1,7 +1,6 @@
 #include <iostream>
 #include "raylib.h"
 #include "game.hpp"
-#include "laser.hpp"
 
 int main()
 {
@@ -11,17 +10,19 @@ int main()
     InitWindow(width, height, "Space Invaders");
     SetTargetFPS(60);
     Game game;
-    Laser laser(300, 300, 1);
+    
 
     while (!WindowShouldClose()) {
-
+        
         game.checkInput();
-        laser.move();
+        
+        game.Update();
+        
 
         BeginDrawing();
         ClearBackground(BLACK);
         game.Draw();
-        laser.Draw();
+        
         EndDrawing();
     }
 

@@ -28,6 +28,37 @@ void Spaceship::moveShipRight() {
 	}
 }
 
+void Spaceship::shootLaser() {
+	float currentTime = GetTime();
+	if (currentTime - lastLaserShootTime > shootingSpeed) {
+		lasers.push_back(Laser(PosX + (drawWidth / 2), PosY, -1));
+		lastLaserShootTime = currentTime;
+	}
+}
+
+void Spaceship::DrawLasers() const {
+	for (int i = 0; i < lasers.size(); i++) {
+		lasers[i].Draw();
+	}
+}
+
+void Spaceship::UpdateLaserPos() {
+	for (int i = 0; i < lasers.size(); i++) {
+		lasers[i].move();
+	}
+}
+
+void Spaceship::deleteInactiveLaser() {
+	for (auto it = lasers.begin(); it != lasers.end();) {
+		if (!(it->Active())) {
+			it = lasers.erase(it);
+		}
+		else {
+			it++;
+		}
+	}
+}
+
 
 Spaceship::~Spaceship() {
 	UnloadTexture(ship);

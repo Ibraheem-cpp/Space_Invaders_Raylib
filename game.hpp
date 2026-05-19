@@ -12,6 +12,7 @@ public:
 
 	void Draw();
 	void checkInput();
+	void Update();
 
 	~Game();
 };
