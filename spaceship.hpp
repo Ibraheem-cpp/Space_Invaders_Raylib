@@ -10,10 +10,10 @@ private:
 	float shootingSpeed = 0.2;
 	int sizeX = 100;
 	int sizeY = 100;
-	float drawScale = 0.6f;
+	float drawScale = 0.5f;
 	float drawWidth = 100 * drawScale;
 	float drawHeight = 100 * drawScale;
-	float speed = 7.0;
+	float speed = 6.0;
 	float PosX = 0;
 	float PosY = 0;
 	Texture2D ship;

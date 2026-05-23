@@ -10,7 +10,6 @@ int main()
     InitWindow(width, height, "Space Invaders");
     SetTargetFPS(60);
     Game game;
-    
 
     while (!WindowShouldClose()) {
         
@@ -26,7 +25,6 @@ int main()
         EndDrawing();
     }
 
-    
     CloseWindow();
 
 

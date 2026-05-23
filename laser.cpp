@@ -11,7 +11,7 @@ Laser::Laser(int PosX, int PosY, int direction) {
 
 void Laser::Draw() const {
 	if (isActive) {
-		DrawRectangle(this->PosX - width / 2, PosY, width, length, GREEN);
+		DrawRectangle(this->PosX - width / 2, PosY - 15, width, length, YELLOW);
 	}
 }
 

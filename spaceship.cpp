@@ -11,7 +11,7 @@ Spaceship::Spaceship() {
 }
 
 void Spaceship::Draw() const {
-	DrawTextureEx(ship, { PosX, PosY }, 0, drawScale, WHITE);
+	DrawTextureEx(ship, { PosX, PosY - 15 }, 0, drawScale, WHITE);
 }
 
 void Spaceship::moveShipLeft() {
